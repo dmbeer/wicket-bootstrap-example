@@ -17,17 +17,16 @@
 package example;
 
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.request.mapper.parameter.PageParameters;
+import org.apache.wicket.markup.html.panel.Panel;
 
-public class HomePage extends BasePage {
-	private static final long serialVersionUID = 1L;
+/**
+ * Created by dbeer on 12/12/13.
+ */
+public final class FooterPanel extends Panel {
 
-	public HomePage(final PageParameters parameters) {
-		super(parameters);
+    public FooterPanel(String id) {
+        super(id);
 
-		add(new Label("version", getApplication().getFrameworkSettings().getVersion()));
-
-		// TODO Add your page's components here
-
+        add(new Label("wicket-version", getApplication().getFrameworkSettings().getVersion()));
     }
 }
