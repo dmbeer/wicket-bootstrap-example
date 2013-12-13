@@ -23,8 +23,8 @@
 	<artifactId>Wicket-Bootstrap-Sample</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
-		<!-- TODO project name  -->
-	<name>quickstart</name>
+
+	<name>wicket-bootstrap-example</name>
 	<description>Example Project to show to Integrate Wicket and Bootstrap 3</description>
 
 	<licenses>
@@ -99,6 +99,7 @@
 		</dependency>
 	</dependencies>
 	<build>
+        <finalName>wicket-bootstrap-example</finalName>
 		<resources>
 			<resource>
 				<filtering>false</filtering>
