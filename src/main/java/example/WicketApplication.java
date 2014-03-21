@@ -19,8 +19,6 @@ package example;
 import de.agilecoders.wicket.core.Bootstrap;
 import de.agilecoders.wicket.core.settings.BootstrapSettings;
 import de.agilecoders.wicket.core.settings.IBootstrapSettings;
-import de.agilecoders.wicket.core.settings.ThemeProvider;
-import de.agilecoders.wicket.themes.settings.BootswatchThemeProvider;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.http.WebApplication;
 
@@ -51,15 +49,8 @@ public class WicketApplication extends WebApplication
 	}
 
     private void configureBootstrap() {
-        final ThemeProvider themeProvider = new BootswatchThemeProvider() {
-            {
-                defaultTheme("spacelab");
-            }
-
-        };
-
-        final IBootstrapSettings settings = new BootstrapSettings();
-        settings.setThemeProvider(themeProvider);
+        final IBootstrapSettings settings =  new BootstrapSettings();
+        settings.useCdnResources(true);
         Bootstrap.install(this, settings);
     }
 }
