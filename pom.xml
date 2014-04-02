@@ -70,6 +70,11 @@
             <artifactId>wicket-bootstrap-themes</artifactId>
             <version>${wicket.bootsrap.version}</version>
         </dependency>
+        <dependency>
+            <groupId>de.agilecoders.wicket</groupId>
+            <artifactId>wicket-bootstrap-less</artifactId>
+            <version>${wicket.bootsrap.version}</version>
+        </dependency>
 
         <!-- LOGGING DEPENDENCIES - LOG4J -->
         <dependency>
