@@ -51,6 +51,7 @@ public class ChangePasswordPanel extends Panel {
         form = new BootstrapForm<Void>("form");
         form.add(new FormBehavior().type(FormType.Horizontal));
         form.setOutputMarkupId(true);
+        form.setOutputMarkupPlaceholderTag(true);
         
         FormGroup formGroupPassword =  new FormGroup("formGroupPassword", Model.of("Password"));
         formGroupPassword.add(password);
