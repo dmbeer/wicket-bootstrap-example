@@ -37,6 +37,7 @@ import org.apache.wicket.resource.JQueryResourceReference;
 public class WicketApplication extends WebApplication {
 
     /**
+     * @return HomePage.class
      * @see org.apache.wicket.Application#getHomePage()
      */
     @Override
