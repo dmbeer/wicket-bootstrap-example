@@ -45,7 +45,7 @@ public class HeaderPanel extends Panel {
         Navbar navbar = new Navbar("navbar");
         navbar.setInverted(true);
         navbar.setPosition(Navbar.Position.TOP);
-        navbar.brandName(Model.of("Wicket-Bootstrap3 Sample"));
+        navbar.setBrandName(Model.of("Wicket-Bootstrap3 Sample"));
 
         DropDownButton dropdown = new NavbarDropDownButton(Model.of("DropDown")) {
 

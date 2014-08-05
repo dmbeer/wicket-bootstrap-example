@@ -36,8 +36,8 @@
     </licenses>
 
     <properties>
-        <wicket.version>6.14.0</wicket.version>
-        <wicket.bootsrap.version>0.9.3-SNAPSHOT</wicket.bootsrap.version>
+        <wicket.version>6.16.0</wicket.version>
+        <wicket.bootsrap.version>0.9.6-SNAPSHOT</wicket.bootsrap.version>
         <jetty.version>7.6.13.v20130916</jetty.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
