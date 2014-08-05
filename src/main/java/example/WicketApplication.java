@@ -22,6 +22,7 @@ import de.agilecoders.wicket.core.settings.ThemeProvider;
 import de.agilecoders.wicket.less.BootstrapLess;
 import de.agilecoders.wicket.themes.markup.html.bootswatch.BootswatchTheme;
 import de.agilecoders.wicket.themes.markup.html.bootswatch.BootswatchThemeProvider;
+import example.upload.FileUploadPage;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.http.WebApplication;
 import org.apache.wicket.request.Url;
@@ -57,6 +58,7 @@ public class WicketApplication extends WebApplication {
                         Url.parse("http://code.jquery.com/jquery-1.11.0.min.js")));
         
         mountPage("account", UserAccountPage.class);
+        mountPage("fileUpload", FileUploadPage.class);
     }
 
     private void configureBootstrap() {
