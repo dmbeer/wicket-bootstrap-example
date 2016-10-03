@@ -36,8 +36,8 @@
     </licenses>
 
     <properties>
-        <wicket.version>6.16.0</wicket.version>
-        <wicket.bootsrap.version>0.9.6-SNAPSHOT</wicket.bootsrap.version>
+        <wicket.version>7.4.0</wicket.version>
+        <wicket.bootsrap.version>0.10.9</wicket.bootsrap.version>
         <jetty.version>7.6.13.v20130916</jetty.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -140,13 +140,12 @@
         </testResources>
         <plugins>
             <plugin>
-                <inherited>true</inherited>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.5.1</version>
+                <version>3.5.1</version>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                     <encoding>UTF-8</encoding>
                     <showWarnings>true</showWarnings>
                     <showDeprecation>true</showDeprecation>
