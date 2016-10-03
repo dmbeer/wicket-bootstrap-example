@@ -23,23 +23,19 @@ import org.junit.Test;
 /**
  * Simple test using the WicketTester
  */
-public class TestHomePage
+public class TestHomePage extends WicketAplicationTest
 {
-	private WicketTester tester;
 
 	@Before
-	public void setUp()
-	{
-		tester = new WicketTester(new WicketApplication());
+	public void setUp() {
+		tester().startPage(HomePage.class);
 	}
+
 
 	@Test
 	public void homepageRendersSuccessfully()
 	{
-		//start and render the test page
-		tester.startPage(HomePage.class);
-
 		//assert rendered page class
-		tester.assertRenderedPage(HomePage.class);
+		tester().assertRenderedPage(HomePage.class);
 	}
 }
