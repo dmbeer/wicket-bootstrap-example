@@ -53,22 +53,17 @@ public class WicketApplication extends WebApplication {
     public void init() {
         super.init();
         configureBootstrap();
-        addResourceReplacement(JQueryResourceReference.get(),
-                new UrlResourceReference(
-                        Url.parse("http://code.jquery.com/jquery-1.11.0.min.js")));
-        
+
         mountPage("account", UserAccountPage.class);
         mountPage("fileUpload", FileUploadPage.class);
     }
 
     private void configureBootstrap() {
-        
-        final IBootstrapSettings settings = new BootstrapSettings();
-        settings.useCdnResources(true);
-        
         final ThemeProvider themeProvider = new BootswatchThemeProvider(BootswatchTheme.Spacelab);
+        final BootstrapSettings settings = new BootstrapSettings();
+        settings.useCdnResources(true);
         settings.setThemeProvider(themeProvider);
-        
+
         Bootstrap.install(this, settings);
         BootstrapLess.install(this);
     }
