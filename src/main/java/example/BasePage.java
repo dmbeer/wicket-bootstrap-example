@@ -17,21 +17,21 @@
 package example;
 
 import de.agilecoders.wicket.core.Bootstrap;
-import de.agilecoders.wicket.core.markup.html.bootstrap.html.ChromeFrameMetaTag;
 import de.agilecoders.wicket.core.markup.html.bootstrap.html.HtmlTag;
 import de.agilecoders.wicket.core.markup.html.bootstrap.html.MetaTag;
-import de.agilecoders.wicket.core.markup.html.bootstrap.html.OptimizedMobileViewportMetaTag;
+import de.agilecoders.wicket.core.markup.html.bootstrap.html.MobileViewportMetaTag;
+import de.agilecoders.wicket.extensions.markup.html.bootstrap.icon.FontAwesomeCDNCSSReference;
 import de.agilecoders.wicket.extensions.markup.html.bootstrap.icon.FontAwesomeCssReference;
 import org.apache.wicket.markup.head.CssHeaderItem;
 import org.apache.wicket.markup.head.IHeaderResponse;
-import org.apache.wicket.markup.html.WebPage;
+import org.apache.wicket.markup.html.GenericWebPage;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 
 /**
  * Created by dbeer on 12/12/13.
  */
-public class BasePage extends WebPage {
+public class BasePage<T> extends GenericWebPage<T> {
 
     public BasePage() {
         super();
@@ -42,10 +42,9 @@ public class BasePage extends WebPage {
 
         add(new HtmlTag("html"));
 
-        add(new OptimizedMobileViewportMetaTag("viewport"));
-        add(new MetaTag("description", Model.of("description"), Model.of("Tansu")));
-        add(new MetaTag("author", Model.of("author"), Model.of("Copper Arrow Software Services")));
-        add(new ChromeFrameMetaTag("chrome-frame"));
+        add(new MobileViewportMetaTag("viewport"));
+        add(new MetaTag("description", Model.of("description"), Model.of("Test")));
+        add(new MetaTag("author", Model.of("author"), Model.of("Hello")));
 
         //add header panel
         add(new HeaderPanel("header"));
@@ -57,7 +56,7 @@ public class BasePage extends WebPage {
         super.renderHead(response);
 
         Bootstrap.renderHead(response);
-        response.render(CssHeaderItem.forReference(FontAwesomeCssReference.instance()));
+        response.render(CssHeaderItem.forReference(FontAwesomeCDNCSSReference.instance()));
     }
 
 }
